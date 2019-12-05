@@ -14,16 +14,10 @@
 <body>
 	<ul>
 		<?php
-			foreach ($animals as $name) {
+			foreach ($names as $name) {
 				echo "<li>$name</li>";
 			}
-
-		#Why this doesn't work?
-		#<?=
-		#	foreach ($animals as $animal) {
-		#	echo "<li>$animal</li>";
-		#	}
-		#?>
+		?>
 	</ul>
 </body>
 </html>
