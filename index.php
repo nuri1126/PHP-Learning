@@ -1,10 +1,16 @@
 <?php
 
-$tasks = [
-	'title' => 'Finish homework',
-	'due' => 'today',
-	'assigned_to' => 'Nuri',
-	'completed' => false //boolean
-]; //title. due, assigned_to, completed
+require 'function.php';
+
+$animals = ['dog', 'cat'];
+
+dumper('hello','big','world');
+
+acceptable_age(21);
+
+dd($animals);
+dd("hello world");
+
+acceptable_age(21);
 
 require 'index.view.php';
