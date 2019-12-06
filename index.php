@@ -1,16 +1,48 @@
 <?php
-
 require 'function.php';
+class Task{
+	public $description;
 
-$animals = ['dog', 'cat'];
+	public $completed = false;
 
-dumper('hello','big','world');
+	#automatically triggered on instantiation
+	public function __construct($description)
+	{
+		$this -> description = $description;
+	}
 
-acceptable_age(21);
+	public function complete()
+	{
+		$this -> completed = true;
+	}
+	public function isComplete()
+	{
+		return $this -> completed;
+	}
+	public function description()
+	{
+		return $this -> description;
+	}
+}
 
-dd($animals);
-dd("hello world");
+$task = new Task('Go to the store'); //a new task object
 
-acceptable_age(21);
+$task -> complete(); //complete the task
+
+var_dump($task->isComplete());
+//$task -> description; //couldn't access
+var_dump($task);
+#require 'index.view.php';
+
+$tasks = [
+	$task = new Task('Go to the store'),
+	$task = new Task('Clean my room'),
+	$task = new Task('Make dinner')
+];
+
+$tasks[0] -> complete();
 
 require 'index.view.php';
+
+
+dd($tasks);
