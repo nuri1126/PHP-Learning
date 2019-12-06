@@ -33,30 +33,7 @@
 			<strong>Personal Responsible: </strong><?= $tasks['assigned_to'];?>
 		</li>
 		<li>
-			<strong>Status: </strong>
-			<?=
-				//ternary operator
-				$tasks['completed'] ? 'Completed' : 'Incompleted';
-			?>
-			<?php
-			//HTML unicode reference
-			//https://www.w3schools.com/charsets/ref_utf_dingbats.asp
-			//! --> bang, punctuation mark == not
-			//if(! true) --> not true
-				if($tasks['completed']){
-
-					echo '&#9989;';
-				}
-				else
-					echo "&#x274E";
-			?>
-
-			<?php if($tasks['completed']) : ?>
-				<span class="icon">&#9989;</span>
-			<?php else : ?>
-				<span class="icon">&#x274E;</span>
-			<?php endif; ?>
-
+			<strong>Status: </strong><?= $tasks['completed'] ? 'Completed' : 'Incompleted';?>
 		</li>
 	</ul>
 
